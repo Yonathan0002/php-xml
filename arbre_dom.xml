@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maStructure lang="fr">
+    <!--Données proposées-->
+    <auteur>
+        <nom>Cutrona</nom>
+        <prenom>Jérôme</prenom>
+    </auteur>
+    <localisation>
+		<lat>49.239875793457</lat>
+		<lng>4.061983108521</lng>
+    </localisation>
+    <identification>
+        <login>cutron01</login>
+        <domaine>univ-reims.fr</domaine>
+    </identification>
+    <identification>
+        <login>cutron01</login>
+        <domaine>iut-rcc-info.urca</domaine>
+    </identification>
+    <messageSecret valeur="26832cffeeea995f262d40c7cea18d039c383ef1" encodage="sha1"/>
+</maStructure>

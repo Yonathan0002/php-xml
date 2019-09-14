@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Racine>
+   <auteur>
+     <nom>Cutrona</nom>
+     <prénom>Jérôme</prénom>
+   </auteur>
+   <decompte>
+      <!-- Le premier chiffre -->
+      <chiffre valeur="3">Trois</chiffre>
+      <chiffre valeur="2">Deux</chiffre>
+      <chiffre valeur="1">Un</chiffre>
+    </decompte>
+</Racine>
