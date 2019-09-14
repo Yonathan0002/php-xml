@@ -1,0 +1,66 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="maStructure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="auteur">
+          <xs:annotation>
+            <xs:documentation>Données proposées</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nom"/>
+              <xs:element type="xs:string" name="prenom"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="localisation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:float" name="lat">
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="-90"/>
+                    <xs:maxInclusive value="90"/>
+                </xs:restriction>
+              </xs:element>
+              <xs:element type="xs:float" name="lng">
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="-180"/>
+                    <xs:maxInclusive value="180"/>
+                </xs:restriction>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="identification" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="login">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{2}+[a-zA-Z0-9]{8}+[a-z]{6}"/>
+                </xs:restriction>
+              </xs:element>
+              <xs:element type="xs:string" name="domaine"/>
+              <xs:element type="xs:string" name="login">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="*fr|*com|*net|*org"/>
+                </xs:restriction>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="messageSecret">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="valeur"/>
+                <xs:attribute type="xs:string" name="encodage"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="lang"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
